@@ -1,2 +1,10 @@
-const amountcategories = document.querySelectorAll("#categories");
-console.log(amountcategories);
+const amountcategories = document.querySelectorAll(".item");
+const title = document.querySelectorAll("h2");
+const amountItems = document.querySelectorAll(".item ul");
+console.log(`Number of categories: ${amountcategories.length}`);
+console.log(`Category: ${title[0].textContent}`);
+console.log(`Elements: ${amountItems[0].children.length}`);
+console.log(`Category: ${title[1].textContent}`);
+console.log(`Elements: ${amountItems[1].children.length}`);
+console.log(`Category: ${title[2].textContent}`);
+console.log(`Elements: ${amountItems[2].children.length}`);
