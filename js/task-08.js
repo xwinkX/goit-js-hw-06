@@ -9,11 +9,10 @@ event.preventDefault();
     if (validForm) {
         alert('Всі поля повинні бути заповнені');
     }
-    const formData = new FormData(event.currentTarget);
-    // console.lof(formData);
-    formData.forEach((value, name) => {
-        console.log('name', name);
-        console.log('value', value);
-    })
-    form.reset();
+    else {
+        const formData = new FormData(event.currentTarget);
+        const formResult = Object.fromEntries(formData.entries());
+        console.log(formResult)
+        event.currentTarget.reset();
+    }
 }
