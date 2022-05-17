@@ -14,8 +14,7 @@ const images = [
 ];
 
 const titleEl = document.querySelector('.gallery');
-images.map(image =>
-  titleEl.insertAdjacentHTML('afterbegin', `<li> <img class=image src="${image.url}" alt="${image.alt}"></img></li>`));
+const createImages =  images.map(image => `<li> <img class=image src="${image.url}" alt="${image.alt}"></img></li>`).join('');
 titleEl.classList.add('images-item');  
 console.log(titleEl);
- 
+titleEl.insertAdjacentHTML('afterbegin', createImages);
